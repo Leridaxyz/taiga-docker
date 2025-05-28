@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: taiga
+    env: docker
+    dockerfilePath: ./docker/Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: TAIGA_SECRET_KEY
+        value: your-secret-key-here
+      - key: TAIGA_DOMAIN
+        value: projects.lerida.xyz
+      - key: TAIGA_DEBUG
+        value: false
